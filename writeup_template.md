@@ -4,15 +4,16 @@
 ---
 
 
-**The goals / steps of this project are the following:**  
+**To finish the Project I made the following actions:**  
 
 **Training / Calibration**  
-
-* Download the simulator and take data in "Training Mode"
-* Test out the functions in the Jupyter Notebook provided
-* Add functions to detect obstacles and samples of interest (golden rocks)
-* Fill in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` you create in this step should demonstrate that your mapping pipeline works.
-* Use `moviepy` to process the images in your saved dataset with the `process_image()` function.  Include the video you produce as part of your submission.
+ 
+* I downloaded the simulator and took data in "Training Mode"
+* I tested out the functions in the Jupyter Notebook provided
+* I added functions to detect obstacles and samples of interest (golden rocks)
+  *ddooommmiiinnniiikkkk
+* Filled in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` I created in this step should demonstrate that my mapping pipeline works.
+* Used `moviepy` to process the images in my saved dataset with the `process_image()` function.  Included the video I produced as part of my submission in file mapping.mp4
 
 **Autonomous Navigation / Mapping**
 
