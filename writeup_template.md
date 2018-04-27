@@ -10,8 +10,7 @@
  
 * I downloaded the simulator and took data in "Training Mode"
 * I tested out the functions in the Jupyter Notebook provided
-* I added functions to detect obstacles and samples of interest (golden rocks)
-  * ddooommmiiinnniiikkkk
+* I added `find_rocks()` to distinguish Golden Rocks from other rocks and terrain
 * Filled in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` I created in this step should demonstrate that my mapping pipeline works.
 * Used `moviepy` to process the images in my saved dataset with the `process_image()` function.  Included the video I produced as part of my submission in file mapping.mp4
 
