@@ -2,10 +2,6 @@
 ---
 
 
-
-* I added the same functions to Jupyter Notebook, and file `perception.py` named `find_rocks` which is similar to function `color_thershold`, because is choosing out the rocks color and returning 'black and white' image with selected rock. If function `find_rocks` is returning any data, map is filled with square which is position of finded rock.
-* I modified function `process_image()` to transform images into view from isometric perspective, I add color threshold with masked view of camera to overcome unnecessary pixels, which is defined in `perspect_transform`. `perception.py` is also reading current position of rover and mapping it to world map, what is seen as red and blue marks on map
-
 [//]: # (Image References)
 
 [image1]: ./misc/rover_image.jpg
@@ -28,15 +24,22 @@
 
 
 #### 2. Next was edited `process_image()`
-#####   ^ 
+ * by using `perspect_transform()` I defined `warped` and `mask` which was used by `color_thresh()`, defined as `threshed`, next defined are obstacles and coordinates of the rover `xpix` and `ypix`
+ * after defined size of the world `world_size`, using coordinates and angle of yaw, I defined position of the rover on the world map, using class `Databucket` defined as `data`, I set this up
+ * next was marking position of rocks by looking for another colours on warped picture, function is using conditional loop to detect any changes of colours, in specified range,  as you can see in the video,on map, path is marked in lighter blue, seen walls darker blue, the rocks are azure, video is named `mapping.mp4`
+ * function `find_rocks` are returning images: 
+ 
+ ![alt text][image6] ![alt text][image7]
+ 
 
+### Autonomous Navigation and Mapping in local files
 
-### Autonomous Navigation and Mapping
-
-#### 1. Fill in the `perception_step()` (at the bottom of the `perception.py` script) and `decision_step()` (in `decision.py`) functions in the autonomous mapping scripts and an explanation is provided in the writeup of how and why these functions were modified as they were.
-
-
-#### 2. Launching in autonomous mode your rover can navigate and map autonomously.  Explain your results and how you might improve them in your writeup.  
+#### 1. Filling up the `decision_step()` 
+ * I was focused to make my Rover drive correctly and I wanted to be sure it will avoid all of obstacles, funtion `time` is added and used in conditional loop writed by me at beginning, making my Rover driving backward I delayed it 2 seconds to be sure he were in right position to continue driving
+ * added was `Rover.mode` `backward`, rest of `decision_step()` is not changed
+#### 2. Filling up the `perception_step()`
+ * I used almost the same functions as I used in Jupyter Notebook document, the differences were that I had to define `source` and `destination` variables, the Rocks are marked on map as squares,
+ * The function is also counting finded and collected rocks, which u can see in the simulator on the map
 
 **Note: running the simulator with different choices of resolution and graphics quality may produce different results, particularly on different machines!  Make a note of your simulator settings (resolution and graphics quality set on launch) and frames per second (FPS output to terminal by `drive_rover.py`) in your writeup when you submit the project so your reviewer can reproduce your results.**
 
