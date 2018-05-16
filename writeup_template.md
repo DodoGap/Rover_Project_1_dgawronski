@@ -1,38 +1,29 @@
 ## Project: Search and Sample Return
-### Writeup Template: You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
 ---
 
 
-**To finish the Project I made the following actions:**  
-
-
-**Autonomous Navigation / Mapping**
 
 * I added the same functions to Jupyter Notebook, and file `perception.py` named `find_rocks` which is similar to function `color_thershold`, because is choosing out the rocks color and returning 'black and white' image with selected rock. If function `find_rocks` is returning any data, map is filled with square which is position of finded rock.
-* I modified function `process_image()` to transform images into view from isometric perspective, I add color threshold with masked view of camera to overcome unnecessary pixels, which is defined in `perspect_transform`. `perception.py` is also reading current position of rover and mapping it to world map, what is seen as red and blue colour on map
+* I modified function `process_image()` to transform images into view from isometric perspective, I add color threshold with masked view of camera to overcome unnecessary pixels, which is defined in `perspect_transform`. `perception.py` is also reading current position of rover and mapping it to world map, what is seen as red and blue marks on map
 
 [//]: # (Image References)
 
 [image1]: ./misc/rover_image.jpg
 [image2]: ./calibration_images/example_grid1.jpg
 [image3]: ./calibration_images/example_rock1.jpg 
+[image4]: ./output/warped_example.jpg 
+[image5]: ./output/mask_example.jpg
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  
-
-You're reading it!
 
 ### Notebook Analysis
-#### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
-Here is an example of how to include an image in your writeup.
+#### 1. I added a few lines to `perspect_transform()`, at first I added mask (white triangle as u can see on image below) to output warped images, be sure, there won't be any unnecessary pixels or stuff.
 
-![alt text][image1]
+![alt text][image4]
+
+
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
 And another! 
