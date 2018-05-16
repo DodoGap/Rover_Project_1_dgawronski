@@ -13,6 +13,8 @@
 [image3]: ./calibration_images/example_rock1.jpg 
 [image4]: ./output/warped_example.jpg 
 [image5]: ./output/mask_example.jpg
+[image6]: ./output/rock.jpg
+[image7]: ./output/example_rock.jpg
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 
@@ -21,14 +23,14 @@
 ### Notebook Analysis
 #### 1. I added a few lines to `perspect_transform()`, at first I added `mask` (white triangle as u can see on image below) to output warped images, be sure, there won't be any unnecessary pixels or stuff.
 
+
 ![alt text][image4] ![alt text][image5]
 
 
+#### 2. Next was edited `process_image()`
+#####   ^ 
 
-#### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
-And another! 
 
-![alt text][image2]
 ### Autonomous Navigation and Mapping
 
 #### 1. Fill in the `perception_step()` (at the bottom of the `perception.py` script) and `decision_step()` (in `decision.py`) functions in the autonomous mapping scripts and an explanation is provided in the writeup of how and why these functions were modified as they were.
