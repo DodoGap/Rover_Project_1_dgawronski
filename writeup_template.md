@@ -14,8 +14,6 @@
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 
----
-
 ### Notebook Analysis
 #### 1. I added a few lines to `perspect_transform()`, at first I added `mask` (white triangle as u can see on image below) to output warped images, be sure, there won't be any unnecessary pixels or stuff.
 
