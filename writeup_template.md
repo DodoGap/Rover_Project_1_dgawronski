@@ -6,19 +6,11 @@
 
 **To finish the Project I made the following actions:**  
 
-**Training / Calibration**  
- 
-* I downloaded the simulator and took data in "Training Mode"
-* I tested out the functions in the Jupyter Notebook provided
-* I added `find_rocks()` to distinguish Golden Rocks from other rocks and terrain
-* Filled in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` I created in this step should demonstrate that my mapping pipeline works.
-* Used `moviepy` to process the images in my saved dataset with the `process_image()` function.  Included the video I produced as part of my submission in file mapping.mp4
 
 **Autonomous Navigation / Mapping**
 
-* Fill in the `perception_step()` function within the `perception.py` script with the appropriate image processing functions to create a map and update `Rover()` data (similar to what you did with `process_image()` in the notebook). 
-* Fill in the `decision_step()` function within the `decision.py` script with conditional statements that take into consideration the outputs of the `perception_step()` in deciding how to issue throttle, brake and steering commands. 
-* Iterate on your perception and decision function until your rover does a reasonable (need to define metric) job of navigating and mapping.  
+* I added the same functions to Jupyter Notebook, and file `perception.py` named `find_rocks` which is similar to function `color_thershold`, because is choosing out the rocks color and returning 'black and white' image with selected rock. If function `find_rocks` is returning any data, map is filled with square which is position of finded rock.
+* I modified function `process_image()` to transform images into view from isometric perspective, I add color threshold with masked view of camera to overcome unnecessary pixels, which is defined in `perspect_transform`. `perception.py` is also reading current position of rover and mapping it to world map, what is seen as red and blue colour on map
 
 [//]: # (Image References)
 
