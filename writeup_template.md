@@ -40,13 +40,4 @@
 #### 2. Filling up the `perception_step()`
  * I used almost the same functions as I used in Jupyter Notebook document, the differences were that I had to define `source` and `destination` variables, the Rocks are marked on map as squares,
  * The function is also counting finded and collected rocks, which u can see in the simulator on the map
-
-**Note: running the simulator with different choices of resolution and graphics quality may produce different results, particularly on different machines!  Make a note of your simulator settings (resolution and graphics quality set on launch) and frames per second (FPS output to terminal by `drive_rover.py`) in your writeup when you submit the project so your reviewer can reproduce your results.**
-
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
-
-
-
-![alt text][image3]
-
-
+ 
